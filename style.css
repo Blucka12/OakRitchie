@@ -1,0 +1,46 @@
+body{
+  background-color:
+}
+
+header{
+	background-image:url(OakTpic.JPG)
+  background-color:gray;
+  border:1px solid black;
+  margin:1em;
+  padding:5px;
+}
+
+nav{
+  color:blue;
+  background-color:gray;
+  border:1px solid black;
+  margin:1em;
+}
+
+#mainContent {
+  background-color:gray;
+  border:1px solid black;
+  margin:1em;
+  padding:5px;
+  height: 100%;
+  width: 60%;
+  position:relative;
+}
+
+#rightColumn{
+  float:right;
+  height:50px;
+  width:30%;
+  margin:1em;
+  background-color:gray;
+  border:1px solid black;
+}
+
+footer{
+  font-style:italic;
+  font-size:small;
+  border:1px solid black;
+  margin:1em;
+  padding:5px;
+  clear:both;
+}
