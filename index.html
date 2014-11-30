@@ -3,43 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <title>Oak Ritchie</title>
-
+<link rel="stylesheet" href="responsive-tables.css">
 <link rel="stylesheet" type="text/css" href="style.css">
+<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' 
+      rel='stylesheet' type='text/css'>
 
-<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
-<header>
-<h1>Oak Ritchie</h1>
-	<nav>
-    	<li><a href="index.html">Home</a></li>
-        <li><a href="Film.html">Film</a></li>
-        <li><a href="Television.html">Boppin'</a></li>
-        <li><a href="Writing.html">Writing</a></li>
-        <li><a href="Music.html">Music</a></li>
-    </nav>
-</header>
+<body> 
 
-<div id="mainContent">
-<article>
-  <section>
-	<h2>Welcome to my site!</h2>
-<p>Here you can see what Oak has done in the past and what he is up to now!</p>
+    <header id="main_header">
+        <div id="steadyflowlogo">
+            <img src="SteadyFlowLogoEdit.svg"/>
+        </div>
+        <h1 id="oakritchie">Oak Ritchie</h1>        
+        <nav id="main_nav">
+            <ul class="flex-container">
+                <li class="flex-item"><a href="index.html">Home</a></li>
+                <li class="flex-item"><a href="Film.html">Film</a></li>
+                <li class="flex-item"><a href="Television.html">Boppin'</a></li>
+                <li class="flex-item"><a href="Writing.html">Writing</a></li>
+                <li class="flex-item"><a href="Music.html">Music</a></li>
+            </ul>
+        </nav>
+    </header>
 
-	<h2>Diversity</h2>
-<p>My interests have shifted and evolved over the years, and you'll get a decent cross-section of the work I'm involved in. Have fun! </p>
-  </section>
-</article>
+    <section id="main_section">
+        <div id="mainContent">
+            <div onclick="toggleVisibility('image1','details1')">  		
+                <strong>Welcome to my site!</strong>
+            </div>
+            <div class=“outer_row”>
+            <div class=“inner_column” id=“column_1”></div>
+            <p id="details1">
+                Welcome to the central hub for my work over the years. I have been honored to work in the film industry; from short films and documentaries to major motion pictures, such as "Gods and Generals"; the music industry, as a professional rock percussionist; and the television business with over 100 episodes of web television content with guests of various expertise. 
+                I now am developing my skills as an information professional, with skills building in web development, systems analysis, data analysis, social media algorithmic analysis and data visualization, just to name a few. These skills all synthesize into a broad but focused repository of knowledge of a diverse experience of arts, science and social development. 
+            </p>
+            <br>
+            <div onclick="toggleVisibility('image2','details2')">
+                    <strong>Diversity</strong>
+            </div>
+            </div>
+            <div class=“inner_column” id=“column_2”>
+            <p id="details2">Be it theology, philosophy, philanthropy or artistry, I have dipped deeply into all of them. A consistent reflective process of the nature of the insistent self, or ego, also steers me clear of indulging in behaviors that result in a lack of modesty. My central philosophy revolves around the Teachings of this Author: <p><i>“Be generous in prosperity, and thankful in adversity. Be worthy of the trust of thy neighbor, and look upon him with a bright and friendly face. Be a treasure to the poor, an admonisher to the rich, an answerer of the cry of the needy, a preserver of the sanctity of thy pledge. Be fair in thy judgment, and guarded in thy speech. Be unjust to no man, and show all meekness to all men. Be as a lamp unto them that walk in darkness, a joy to the sorrowful, a sea for the thirsty, a haven for the distressed, an upholder and defender of the victim of oppression. Let integrity and uprightness distinguish all thine acts. Be a home for the stranger, a balm to the suffering, a tower of strength for the fugitive. Be eyes to the blind, and a guiding light unto the feet of the erring. Be an ornament to the countenance of truth, a crown to the brow of fidelity, a pillar of the temple of righteousness, a breath of life to the body of mankind, an ensign of the hosts of justice, a luminary above the horizon of virtue, a dew to the soil of the human heart, an ark on the ocean of knowledge, a sun in the heaven of bounty, a gem on the diadem of wisdom, a shining light in the firmament of thy generation, a fruit upon the tree of humility.”</i></p>
+― Bahá'u'lláh</p>
+        </div>
+        </div>
+        <div id="rightColumn">
+            Please feel free to contact me at: blucka12@gmail.com 
+            for more information or to connect on future projects! Thanks!
+        </div>
+    </section>
+    
+    <article id="main_article">
+        <p>Some other favorite authors of mine include:
+        <ul>
+                <li>Isaac Asimov</li>
+                <li>Richard Bach</li>
+                <li>Shoghi Effendi</li>
+                <li>Paolo Freire</li>
+                <li>Sir Aurthur Conan Doyle</li>
+                <li>Abdú'l-Bahá</li>
+            </ul></p>
+    </article>
 
-<div id="rightColumn">Please feel free to contact me at: blucka12@gmail.com for more information or to connect on future projects! Thanks!</div>
+    <aside id="responsive_table_container">
+        <table class="responsive">
+            <thead>
+                <tr>
+                    <th>Services</th>
+                    <th>Rates</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Videography</td><td>$550</td><td>Day</td>
+                </tr>
+                <tr>
+                    <td>Video/Film Editing</td><td>$550</td><td>Day</td>
+                </tr>
+                <tr>
+                    <td>Drum Lessons</td><td>$50</td><td>Hour</td>
+                </tr>
+                <tr>
+                    <td>Therapeutic Massage</td><td>$50</td><td>Hour</td>
+                </tr>
+            </tbody>
+        </table>
+    </aside>
+    
+    <footer>
+    Copyright 2011 Steady Flow Productions
+    </footer>
+    
+    
+<script src="jquery-1.10.2.js"></script>
+<script src="responsive-tables.js"></script> 
+    
 
-</div>
+<script>
+  function toggleVisibility(image, element){
+    var image   = document.getElementById(image);   // Get the image
+    var element = document.getElementById(element); // Get the element to show/hide
 
-<footer>
-Copyright 2011 Steady Flow Productions
-
-</footer>
-
+    if (element.style.display == "none"){   // Is the element hidden?
+      element.style.display = "block";      // If yes, then show it
+      image.src = "open.png";
+    }
+    else {  // Element is showing, so hide it
+      element.style.display = "none";
+      image.src = "closed.png";
+    }
+  }
+</script>
 </body>
 </html>
